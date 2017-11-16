@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta lang = "en-us" charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.min.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB6X_31uiKDupVBFZCzR3jsFBPBqqEOuHA",
+        authDomain: "trainschedule-e9e1d.firebaseapp.com",
+        databaseURL: "https://trainschedule-e9e1d.firebaseio.com",
+        projectId: "trainschedule-e9e1d",
+        storageBucket: "trainschedule-e9e1d.appspot.com",
+        messagingSenderId: "515180962871"
+      };
+      firebase.initializeApp(config);
+    </script>
+    
+    <script type="text/javascript" src="script.js"></script>
+      
+  </head>
+    
+    
+  <body>
+    
+    <div class="container">
+      <div class="jumbotron">
+        
+        
+      </div>
+      
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h1 class="panel-title">Train Schedule</h1>
+        </div>
+        
+        <div class="panel-body">
+        <table class="table">
+          <tr>
+            <td>Train Name</td>
+            <td>Destination</td>
+            <td>Frequency (min)</td>
+            <td>Next Arrival</td>
+            <td>Minutes Away</td>
+          </tr>
+        </table>
+        </div>
+        
+      </div>
+      
+      
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h1 class="panel-title">Enter New Train</h1>
+        </div>
+        
+        <div class="panel-body">
+        <form>
+          <div class="form-group">
+            <label for="trainName">Train Name</label>
+            <input id="trainName" type="text" class="form-control" placeholder="ex. Denver Line">
+          </div>
+          
+          <div class="form-group">
+            <label for="trainDestination">Destination</label>
+            <input id="trainDestination" type="text" class="form-control" placeholder="ex. Buffalo">
+          </div>
+          
+          <div class="form-group">
+            <label for="firstTrainTime">First Train Time (HH:mm military time)</label>
+            <input id="firstTrainTime" type="text" class = "form-control" placeholder="ex. 20:35">
+          </div>
+          
+          <div class="form-group">
+            <label for="trainFrequency">Frequency (minutes)</label>
+            <input id="trainFrequency" type="text" class = "form-control" placeholder="ex. 120">
+          </div>
+          
+          <button id = "addTrain" type="button" class="btn btn-default">Submit</button>
+        </form>
+        </div>
+      
+      </div>
+    </div>
+      
+  </body>
+</html>
